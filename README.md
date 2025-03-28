@@ -23,7 +23,7 @@ Para melhor compreensão do funcionamento do sistema, abaixo estão algumas imag
 ![Fluxo de Conversa BOT](https://i.imgur.com/1FsWpt6.png)
 *Exemplo da tela do secretário em conversação com cliente.*
 
-![Chat WhatsApp]([https://ibb.co/VWRwYF2X](https://i.imgur.com/ETOR4Ni.png))
+![Chat WhatsApp](https://i.imgur.com/ETOR4Ni.png)
 *Exemplo de um atendimento automatizado via WhatsApp.*
 
 ## Pré-requisitos
