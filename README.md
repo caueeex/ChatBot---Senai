@@ -17,13 +17,13 @@ Este projeto é um sistema de atendimento automatizado integrado ao WhatsApp, de
 
 Para melhor compreensão do funcionamento do sistema, abaixo estão algumas imagens ilustrativas:
 
-![Tela de Login]()
-*Exemplo da tela de login do sistema.*
-
-![Dashboard](images/dashboard.png)
+![Dashboard](/dashboard.png)
 *Painel administrativo para gerenciamento de atendimentos.*
 
-![Chat WhatsApp](images/chat_whatsapp.png)
+![Fluxo de Conversa BOT](Fluxo-ChatBot.png)
+*Exemplo da tela de login do sistema.*
+
+![Chat WhatsApp](ChatBot-Whatsapp.png)
 *Exemplo de um atendimento automatizado via WhatsApp.*
 
 ## Pré-requisitos
