@@ -17,7 +17,7 @@ Este projeto é um sistema de atendimento automatizado integrado ao WhatsApp, de
 
 Para melhor compreensão do funcionamento do sistema, abaixo estão algumas imagens ilustrativas:
 
-![Tela de Login](file:///C:/Users/soter/Desktop/portifolio/Capturar.PNG)
+![Tela de Login]()
 *Exemplo da tela de login do sistema.*
 
 ![Dashboard](images/dashboard.png)
