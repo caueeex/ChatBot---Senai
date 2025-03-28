@@ -1,0 +1,317 @@
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #F8FAFC;
+}
+
+.dark body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-color: #E5E7EB;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chat-section {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e7eb;
+}
+
+.dark .chat-section {
+    background-color: #f3f4f6;
+}
+
+.chat-header {
+    background-color: #075E54;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.chat-header .contact-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.chat-header .contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.chat-header .bot-status {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+.chat-header .bot-status.active {
+    background-color: #10B981;
+}
+
+.chat-header .bot-status.disabled {
+    background-color: #E30613;
+}
+
+.chat-body {
+    flex: 1;
+    background-color: #ECE5DD;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.message {
+    max-width: 70%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1rem;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.message:hover {
+    transform: translateY(-2px);
+}
+
+.message.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.message.sent {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.message .timestamp {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.25rem;
+    text-align: right;
+}
+
+.chat-actions {
+    background-color: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chat-actions .action-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.chat-actions .predefined-messages {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.chat-actions .predefined-messages button {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.chat-actions .predefined-messages button:hover {
+    background-color: #d1d5db;
+}
+
+.chat-footer {
+    background-color: #f0f0f0;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.chat-footer textarea {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 1.5rem;
+    outline: none;
+    resize: none;
+    height: 48px;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+}
+
+.chat-footer textarea:focus {
+    border-color: #25D366;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+}
+
+.chat-footer button,
+.chat-actions button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.chat-footer .send-button {
+    background-color: #25D366;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+}
+
+.chat-footer .send-button:hover {
+    background-color: #20b858;
+}
+
+.chat-actions .disable-button {
+    background-color: #F59E0B;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+}
+
+.chat-actions .disable-button:hover {
+    background-color: #d88e0a;
+}
+
+.chat-actions .finalize-button {
+    background-color: #E30613;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+}
+
+.chat-actions .finalize-button:hover {
+    background-color: #c20511;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: #374151;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification.success {
+    background-color: #10B981;
+}
+
+.notification.error {
+    background-color: #E30613;
+}
+
+@media (max-width: 1024px) {
+    #sidebar {
+        transform: translateX(-100%);
+    }
+
+    #sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .header {
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .chat-section {
+        padding: 1rem;
+        height: calc(100vh - 120px);
+    }
+
+    .chat-header .contact-info h2 {
+        font-size: 1.25rem;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .chat-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .chat-actions .action-buttons {
+        justify-content: center;
+    }
+
+    .chat-actions .predefined-messages {
+        justify-content: center;
+    }
+}

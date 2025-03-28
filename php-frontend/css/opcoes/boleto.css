@@ -1,0 +1,293 @@
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #F8FAFC;
+}
+.dark body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-color: #E5E7EB;
+}
+.shadow-custom {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.shadow-custom-hover:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search-section form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.search-section input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background-color: #f8fafc;
+    color: #64748b;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.dark .search-section input {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+.search-section input:focus {
+    border-color: #E30613;
+    ring: 2px;
+    ring-color: #E30613;
+}
+.search-section button, .filters select {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.search-section button:first-of-type {
+    background-color: #E30613;
+    color: white;
+}
+.search-section button:first-of-type:hover {
+    background-color: #c20411;
+}
+.search-section button:last-of-type {
+    background-color: #64748b;
+    color: white;
+}
+.search-section button:last-of-type:hover {
+    background-color: #4b5563;
+}
+.filters select {
+    border: 1px solid #e5e7eb;
+    background-color: #f8fafc;
+    color: #64748b;
+}
+.dark .filters select {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+.filters select:focus {
+    border-color: #E30613;
+    outline: none;
+}
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.action-buttons button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.action-buttons button:first-of-type {
+    background-color: #10b981;
+    color: white;
+}
+.action-buttons button:first-of-type:hover {
+    background-color: #059669;
+}
+.action-buttons button:last-of-type {
+    background-color: #3b82f6;
+    color: white;
+}
+.action-buttons button:last-of-type:hover {
+    background-color: #2563eb;
+}
+.action-buttons button i {
+    margin-right: 0.5rem;
+}
+.action-buttons h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0;
+}
+.atendimentos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.atendimento-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.dark .atendimento-card {
+    background-color: #f3f4f6;
+}
+.atendimento-card:hover {
+    transform: translateY(-4px);
+}
+.atendimento-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #E30613;
+    transition: all 0.3s ease;
+}
+.atendimento-card:hover::before {
+    width: 10px;
+}
+.atendimento-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #E30613;
+    margin-bottom: 0.5rem;
+}
+.atendimento-card p {
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+.atendimento-card p strong {
+    color: #1f2937;
+}
+.dark .atendimento-card p strong {
+    color: #111827;
+}
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.status-badge[status="Aberto"] {
+    background-color: #f59e0b20;
+    color: #f59e0b;
+}
+.status-badge[status="Finalizado"] {
+    background-color: #10b98120;
+    color: #10b981;
+}
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.card-actions button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.card-actions button:nth-child(1) {
+    background-color: #10b981;
+    color: white;
+}
+.card-actions button:nth-child(1):hover {
+    background-color: #059669;
+}
+.card-actions button:nth-child(2) {
+    background-color: #3b82f6;
+    color: white;
+}
+.card-actions button:nth-child(2):hover {
+    background-color: #2563eb;
+}
+.card-actions button:nth-child(3) {
+    background-color: #E30613;
+    color: white;
+}
+.card-actions button:nth-child(3):hover {
+    background-color: #c20411;
+}
+.card-actions button i {
+    margin-right: 0.5rem;
+}
+.no-data {
+    text-align: center;
+    color: #64748b;
+    padding: 2rem;
+    background-color: #f8fafc;
+    border-radius: 0.75rem;
+}
+.dark .no-data {
+    background-color: #e5e7eb;
+}
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.pagina-link {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #E30613;
+    color: white;
+    transition: all 0.3s ease;
+}
+.pagina-link:hover {
+    background-color: #c20411;
+}
+.pagina-atual {
+    font-weight: 500;
+    color: #64748b;
+}
+@media (max-width: 1024px) {
+    #sidebar {
+        transform: translateX(-100%);
+    }
+    #sidebar.open {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0 !important;
+    }
+    .header {
+        left: 0 !important;
+    }
+}
+@media (max-width: 640px) {
+    .search-section form {
+        flex-direction: column;
+    }
+    .search-section input,
+    .search-section button,
+    .filters select {
+        width: 100%;
+    }
+    .action-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .action-buttons button {
+        width: 100%;
+    }
+    .atendimentos-list {
+        grid-template-columns: 1fr;
+    }
+    .paginacao {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .card-actions button {
+        flex: none;
+        width: 100%;
+    }
+}

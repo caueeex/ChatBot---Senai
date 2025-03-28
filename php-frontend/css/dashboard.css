@@ -1,0 +1,56 @@
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #F8FAFC;
+}
+
+.dark body {
+    background-image: url('https://www.transparenttextures.com/patterns/aquarelle.png');
+    background-color: #E5E7EB;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-custom-hover:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    #sidebar {
+        transform: translateX(-100%);
+    }
+
+    #sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .header {
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .table-container table {
+        min-width: 600px;
+    }
+
+    .pagination-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

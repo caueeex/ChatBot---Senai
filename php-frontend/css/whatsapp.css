@@ -1,0 +1,335 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Toggle Menu (Hamburguer) */
+.toggle-menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-menu:hover {
+    background-color: #CC0000;
+    transform: scale(1.1);
+}
+
+.toggle-menu i {
+    font-size: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #8B0000;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease;
+    z-index: 999;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #CC0000;
+    transform: translateX(5px);
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* Conteúdo Principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #8B0000;
+    text-align: center;
+}
+
+/* Seção WhatsApp */
+.whatsapp-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Status de Conexão */
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.connection-status i {
+    font-size: 1.2rem;
+}
+
+.connection-status.connected {
+    color: #25d366;
+}
+
+.connection-status.disconnected {
+    color: #e74c3c;
+}
+
+/* Botões de Conexão */
+#conectarBtn, #desconectarBtn, #ligarServidorBtn, #reconectarBtn {
+    padding: 10px 15px;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#conectarBtn:hover, #desconectarBtn:hover, #ligarServidorBtn:hover, #reconectarBtn:hover {
+    background-color: #CC0000;
+    transform: translateY(-2px);
+}
+
+#conectarBtn i, #desconectarBtn i, #ligarServidorBtn i, #reconectarBtn i {
+    margin-right: 10px;
+}
+
+#conectarBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* QR Code */
+#qrCodeContainer {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#qrCodeContainer.hidden, #statusContainer.hidden, #errorContainer.hidden {
+    display: none;
+}
+
+#qrCodeImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#qrCodeContainer p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Mensagens de Status e Erro */
+#statusContainer, #errorContainer {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+#statusContainer {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#errorContainer {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Histórico de Conexões */
+.connection-history {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.connection-history h3 {
+    font-size: 1.2rem;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.history-item {
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.clear-history-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.clear-history-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .whatsapp-section {
+        align-items: stretch;
+    }
+
+    #conectarBtn, #desconectarBtn, #ligarServidorBtn, #reconectarBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #qrCodeContainer, #statusContainer, #errorContainer {
+        max-width: 100%;
+    }
+
+    .connection-history {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #conectarBtn, #desconectarBtn, #ligarServidorBtn, #reconectarBtn {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .connection-history h3 {
+        font-size: 1rem;
+    }
+
+    .history-item {
+        font-size: 0.8rem;
+    }
+}
